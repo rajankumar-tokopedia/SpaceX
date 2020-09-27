@@ -1,7 +1,7 @@
 import React from "react";
 import LaunchCard from "../../molecules/launchcard/launchcard";
 import './style.css'
-export default function LaunchesList(props) {
+export default function LaunchCardList(props) {
     var content = props.loading ? (
         <div className="loader"></div>
     ) : (

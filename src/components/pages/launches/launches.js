@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import upstream from "../../../upstream";
-import LaunchesList from "../../organisms/launchcardlist/launchcardlist";
+import LaunchCardList from "../../organisms/launchcardlist/launchcardlist";
 import Index from "../../organisms/sidebar";
 import {Footer,Header} from "../../atoms";
 import './launches.css'
@@ -33,7 +33,7 @@ export default function Launches() {
             </div>
             <div className="custom-row max-width-xl">
                 <Index updateSearchString={handleUpdateSearchString} />
-                <LaunchesList loading={loading} launches={launches} />
+                <LaunchCardList loading={loading} launches={launches} />
             </div>
             <div className="custom-row max-width-xl">
                 <Footer />

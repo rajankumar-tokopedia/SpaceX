@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './sidebar.css'
-import FilterGroup from "../../molecules/filter";
+import Filter from "../../molecules/filter";
 import utils from "../../../utils/utils";
 import constants from "../../../constants"
 
@@ -24,19 +24,19 @@ export default function Index(props) {
         <div className="sidebar-col">
             <aside>
                 <h1>Filters</h1>
-                <FilterGroup
+                <Filter
                     filterName="Launch Year"
                     filterValue={yearFilter}
                     setFilter={setYearFilter}
                     filterOptions={constants.LAUNCH_YEARS_OPTIONS}
                 />
-                <FilterGroup
+                <Filter
                     filterName="Launch Status"
                     filterValue={launchSuccessFilter}
                     setFilter={setLaunchSuccessFilter}
                     filterOptions={constants.LAUNCH_STATUS_OPTIONS}
                 />
-                <FilterGroup
+                <Filter
                     filterName="Landed Status"
                     filterValue={landSuccessFilter}
                     setFilter={setLandSuccessFilter}
