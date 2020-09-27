@@ -6,7 +6,7 @@ const server = http.createServer(app);
 
 let currentApp = app;
 const port = process.env.port || 3000
-console.log(port);
+console.log(process.env.port, JSON.stringify(process.env));
 console.log(process.env);
 server
     .listen(port, () => {
