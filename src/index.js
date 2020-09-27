@@ -5,10 +5,7 @@ let app = require('./server').default;
 const server = http.createServer(app);
 
 let currentApp = app;
-
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
-server.listen(server_port, server_host, () => {
+server.listen(process.env.PORT || 3000,() => {
       console.log('🚀 started %d',server_port);
     }).on('error', error => {
       console.log("\nAppError :: " ,error);
