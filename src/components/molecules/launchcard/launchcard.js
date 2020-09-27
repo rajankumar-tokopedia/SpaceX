@@ -1,6 +1,5 @@
 import React from "react";
 import "./launchCard.css";
-//import rocketAvatar from "../assets/rocket-avatar.png";
 
 export default function LaunchCard(props) {
     const { launch } = props;
@@ -10,7 +9,7 @@ export default function LaunchCard(props) {
                 <img
                     className="card-img-top mission-patch"
                     src={launch.missionPatch }
-                    alt="Card image cap"
+                    alt="launch avatar"
                 />
                 <div className="card-body">
                     <h5 className="card-title mission-name color-blue">{`${launch.missionName} #${launch.flightNumber}`}</h5>
