@@ -1,0 +1,33 @@
+.mission-patch {
+    width: 80% !important;
+    margin: auto;
+    background: #ececec;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.launch-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.launch-card .card {
+    padding-top: 20px;
+    border: none;
+    border-radius: 10px;
+    flex: 1 0 auto;
+}
+
+.color-blue {
+    color: #3f4c9d;
+}
+
+.mission-name {
+    font-weight: bold;
+}
+
+.detail.bold {
+    font-weight: bold;
+}

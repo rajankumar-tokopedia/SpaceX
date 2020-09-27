@@ -1,0 +1,119 @@
+.home {
+    background: #efeff4;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.no-launches {
+    color: grey;
+    font-size: 3em;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.custom-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.launch-card,
+.sidebar-col,
+.main-area-col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.launch-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.sidebar-col {
+    flex: 0 0 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.main-area-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+
+
+/* tablet */
+@media (min-width: 700px) {
+    .launch-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .sidebar-col {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    .main-area-col {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+}
+
+/* desktop */
+@media (min-width: 1025px) {
+    .launch-card {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .sidebar-col {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .main-area-col {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .max-width-xl {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    header {
+        max-width: 1440px;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

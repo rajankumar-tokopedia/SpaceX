@@ -1,0 +1,95 @@
+.filters-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-item {
+    padding: 1px 15px;
+    background: #bae594;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    flex: 1 1 40%;
+    max-width: 40%;
+    text-align: center;
+    margin: 3px auto;
+    cursor: pointer;
+}
+
+.filter-item.active {
+    background: #61c200;
+}
+
+aside {
+    position: sticky;
+    background: white;
+    padding: 20px;
+    top: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+aside h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+aside h2 {
+    font-size: 1em;
+    text-align: left;
+    margin-top: 5px;
+}
+
+aside hr {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.clear-filter {
+    text-align: center;
+    background: #f78181;
+    border-radius: 10px;
+    max-width: 50%;
+    margin: 5px auto;
+    color: white;
+    font-weight: 300;
+    font-size: 0.8em;
+    border: none;
+}
+.clear-filter:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.sidebar-col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.sidebar-col {
+    flex: 0 0 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+/* tablet */
+@media (min-width: 700px) {
+    .sidebar-col {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
+/* desktop */
+@media (min-width: 1025px) {
+    .sidebar-col {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+}
+
