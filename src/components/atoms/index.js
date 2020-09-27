@@ -27,12 +27,6 @@ const ClearChips = (props) => (
     </p>
 );
 
-const ClearChips = (props) => (
-    <p className="clear-filter" onClick={props.onClick}>
-        Clear Filter X
-    </p>
-);
-
 export {
     Footer,
     Header,
