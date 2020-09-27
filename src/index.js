@@ -6,12 +6,12 @@ const server = http.createServer(app);
 
 let currentApp = app;
 
-server
-    .listen(process.env.PORT || 3000, () => {
-      console.log('🚀 started');
-    })
-    .on('error', error => {
-      console.log(error);
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+server.listen(server_port, server_host, () => {
+      console.log('🚀 started %d',server_port);
+    }).on('error', error => {
+      console.log("\nAppError :: " ,error);
     });
 
 if (module.hot) {
@@ -19,7 +19,6 @@ if (module.hot) {
 
   module.hot.accept('./server', () => {
     console.log('🔁  HMR Reloading `./server`...');
-
     try {
       app = require('./server').default;
       server.removeListener('request', currentApp);
