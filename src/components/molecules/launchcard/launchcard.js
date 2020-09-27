@@ -1,5 +1,5 @@
 import React from "react";
-import "./launchCard.css";
+import "./launchcard.css";
 
 export default function LaunchCard(props) {
     const { launch } = props;
