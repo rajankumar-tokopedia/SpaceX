@@ -5,15 +5,13 @@ let app = require('./server').default;
 const server = http.createServer(app);
 
 let currentApp = app;
-console.log(process.env, typeof process.env)
-var p = process.env
-console.log(p)
-console.log(p.PORT,p.NODE_ENV,p.HOME)
-console.log(process.env["PORT"],process.env.PORT, " port")
-server.listen(process.env.PORT,() => {
-      console.log('🚀 started %d',process.env.PORT);
-    }).on('error', error => {
-      console.log("\nAppError :: " ,error);
+
+server
+    .listen(process.env.PORT || 3000, () => {
+      console.log('🚀 started');
+    })
+    .on('error', error => {
+      console.log(error);
     });
 
 if (module.hot) {
@@ -21,6 +19,7 @@ if (module.hot) {
 
   module.hot.accept('./server', () => {
     console.log('🔁  HMR Reloading `./server`...');
+
     try {
       app = require('./server').default;
       server.removeListener('request', currentApp);
