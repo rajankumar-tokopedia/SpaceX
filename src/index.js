@@ -5,6 +5,7 @@ let app = require('./server').default;
 const server = http.createServer(app);
 
 let currentApp = app;
+console.log(process.env, typeof process.env)
 console.log(process.env["PORT"],process.env.PORT, " port")
 server.listen(process.env.PORT || 3000,() => {
       console.log('🚀 started %d',process.env.PORT);
